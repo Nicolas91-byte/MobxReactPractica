@@ -7,7 +7,7 @@ const fs = require("fs");
 app.use(express.static('build'));
 
 app.get("*", (req, res) => {
-    var contenido = fs.readFileSync("./build/index.html");
+    var contenido = fs.readFileSync("./index.html");
     res.setHeader("Content-Type", "text/html");
     res.send(contenido);
 });
